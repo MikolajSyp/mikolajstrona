@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O mnie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mój ulubiony klub</h1>
+        <style>
+            /* Stylizacja dla h1 */
+            h1 {
+                position: absolute; /* Ustawienie pozycji absolutnej */
+                top: 50%; /* Ustawienie na 50% wysokości */
+                left: 50%; /* Ustawienie na 50% szerokości */
+                transform: translate(-50%, -1100%); /* Przesunięcie o połowę szerokości i wysokości */
+                margin: 0; /* Usunięcie domyślnych marginesów */
+            }
+
+            main {
+            font-size: 24px; /* Zmiana rozmiaru czcionki w elemencie main */
+            padding: 20px; /* Dodanie wypełnienia dla lepszego wyglądu */
+            text-align: center; /* Ustawienie tekstu z lewej strony */
+        }
+
+            p {
+            color: #ffffff; /* Kolor tekstu */
+        }
+        </style>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Glowna</a></li>
+                <li><a href="about.html">Ulubiony Klub</a></li>
+                <li><a href="contact.html">Inne Sporty</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <img src="h.jpg" alt="Opis zdjęcia" width="200" height="200">
+        <h2></h2>
+        <p>
+            Real Madrid to mój ulubiony klub piłkarski, bo grają naprawdę dobrze i mają wiele sukcesów. Ich styl gry jest ekscytujący, a klub jest bardzo znany na całym świecie. Zawsze mają w swojej drużynie najlepszych zawodników jak np. Modric, Alaba czy Vinicius JR, więc każdy ich mecz jest super emocjonujący i pełen niezapomnianych chwil.</p>
+    </main>
+
+    <footer>
+        <p id="currentDateTime">© 2024 MojaWitryna. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+<script>
+    // Pobranie referencji do elementu, w którym ma być wyświetlana data i godzina
+    var currentDateTimeElement = document.getElementById('currentDateTime');
+
+    // Funkcja do aktualizacji daty i godziny co sekundę
+    function updateDateTime() {
+        var currentDate = new Date();
+
+        // Ustawienie formatu wyświetlania daty i godziny
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+
+        // Ustawienie tekstu na stronie
+        currentDateTimeElement.textContent = currentDate.toLocaleDateString('pl-PL', options);
+    }
+
+    // Wywołanie funkcji aktualizacji daty i godziny co sekundę
+    setInterval(updateDateTime, 1000);
+
+    // Wywołanie funkcji raz na początku, aby od razu wyświetlić aktualną datę i godzinę
+    updateDateTime();
+</script
+</body>
+</html>
